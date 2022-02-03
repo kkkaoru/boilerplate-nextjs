@@ -1,6 +1,10 @@
 {
   "name": "my-app",
   "private": true,
+  "engines": {
+    "node": "^16.13.2",
+    "yarn": "^1.22.17"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
