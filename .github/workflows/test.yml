@@ -86,7 +86,7 @@ jobs:
       - name: Jest
         run: yarn test
   test:
-    # needs: ['eslint', 'prettier', 'tsc', 'jest']
+    needs: ['eslint', 'prettier', 'tsc', 'jest']
     runs-on: ubuntu-20.04
     steps:
       - run: echo Done test jobs
