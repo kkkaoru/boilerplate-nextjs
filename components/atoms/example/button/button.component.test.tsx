@@ -4,6 +4,10 @@ import * as stories from './button.stories';
 
 describe('ExampleButton', () => {
   const { Default } = composeStories(stories);
+  it('should be matched snapshot', () => {
+    const { asFragment } = render(<Default />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
   it('should exec onClick when click button', async () => {
     const mockOnClick = jest.fn();

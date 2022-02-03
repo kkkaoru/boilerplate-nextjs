@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExampleLabel should be matched snapshot 1`] = `
+<DocumentFragment>
+  <span
+    class="label"
+  >
+    Example Label
+  </span>
+</DocumentFragment>
+`;
