@@ -8,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'next/core-web-vitals',
     'plugin:jest/recommended',
+    'plugin:storybook/recommended',
     // 'prettier' needs to be bottom
     'prettier',
   ],
