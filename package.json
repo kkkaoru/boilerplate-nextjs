@@ -12,6 +12,7 @@
     "eslint": "eslint --max-warnings=0 --fix --ext .ts,.tsx .",
     "prettier": "prettier --write --check .",
     "lint-staged": "lint-staged",
+    "tsc": "tsc --noEmit",
     "prepare": "husky install"
   },
   "dependencies": {

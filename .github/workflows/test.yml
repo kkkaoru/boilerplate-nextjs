@@ -1,0 +1,93 @@
+name: Test jobs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test.yml'
+      - '*.ts'
+      - '*.js'
+      - '*ignore'
+      - 'yarn.lock'
+jobs:
+  prepare-yarn-cache:
+    name: Prepare Cache
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13.2'
+          cache: 'yarn'
+        run: yarn install
+  eslint:
+    name: ESLint
+    needs: prepare-yarn-cache
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13.2'
+          cache: 'yarn'
+      - name: Install
+        run: yarn install
+      - name: ESLint
+        run: yarn eslint
+  prettier:
+    name: Prettier
+    needs: prepare-yarn-cache
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13.2'
+          cache: 'yarn'
+      - name: Install
+        run: yarn install
+      - name: Prettier
+        run: yarn prettier
+  tsc:
+    name: TypeScript compiler
+    needs: prepare-yarn-cache
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.13.2'
+          cache: 'yarn'
+      - name: Install
+        run: yarn install
+      - name: Compile
+        run: yarn tsc
+  # jest:
+  #   name: Jest
+  #   needs: prepare-yarn-cache
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: '16.13.2'
+  #         cache: 'yarn'
+  #     - name: Install
+  #       run: yarn install
+  #     - name: Jest
+  #       run: yarn test
+  test:
+    # needs: ['eslint', 'prettier', 'tsc', 'jest']
+    needs: ['eslint', 'prettier', 'tsc']
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo Done test jobs
