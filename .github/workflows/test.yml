@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '16.13.2'
           cache: 'yarn'
-        run: yarn install
+      - run: yarn install
   eslint:
     name: ESLint
     needs: prepare-yarn-cache
@@ -86,7 +86,7 @@ jobs:
       - name: Jest
         run: yarn test
   test:
-    needs: ['eslint', 'prettier', 'tsc', 'jest']
+    # needs: ['eslint', 'prettier', 'tsc', 'jest']
     runs-on: ubuntu-20.04
     steps:
       - run: echo Done test jobs
