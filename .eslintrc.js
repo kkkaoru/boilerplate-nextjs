@@ -36,5 +36,23 @@ module.exports = {
         'react/function-component-definition': 'off',
       },
     },
+    {
+      files: ['**/*.stories.tsx'],
+      rules: {
+        'react/function-component-definition': 'off',
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+    {
+      files: ['**/*.test.tsx'],
+      rules: {
+        '@typescript-eslint/await-thenable': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        'max-lines': 'off',
+        'max-depth': 'off',
+        'max-lines-per-function': 'off',
+      },
+    },
   ],
 };
