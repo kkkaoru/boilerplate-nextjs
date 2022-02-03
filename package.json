@@ -19,7 +19,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "is-ci || husky install",
-    "postinstall": "typesync || :"
+    "postinstall": "is-ci || typesync || :"
   },
   "dependencies": {
     "next": "12.0.10",
