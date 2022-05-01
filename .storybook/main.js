@@ -31,4 +31,8 @@ module.exports = {
     });
     return config;
   },
+  babel: async (options) => ({
+    ...options,
+    presets: [...options.presets, '@emotion/babel-preset-css-prop'],
+  }),
 };

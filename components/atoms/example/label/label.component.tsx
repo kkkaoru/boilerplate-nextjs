@@ -1,6 +1,15 @@
+import { css } from '@emotion/react';
 import type { ExampleLabelProps } from './label.types';
-import styles from './label.module.scss';
 
 export function ExampleLabel({ text }: ExampleLabelProps): JSX.Element {
-  return <span className={styles.label}>{text}</span>;
+  return (
+    <span
+      css={css`
+        font-size: 24px;
+        color: red;
+      `}
+    >
+      {text}
+    </span>
+  );
 }

@@ -3,7 +3,7 @@
 exports[`ExampleLabel should be matched snapshot 1`] = `
 <DocumentFragment>
   <span
-    class="label"
+    class="css-cinux9-ExampleLabel"
   >
     Example Label
   </span>
