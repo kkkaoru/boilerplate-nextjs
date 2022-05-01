@@ -63,6 +63,7 @@
     "@types/testing-library__jest-dom": "5.14.3",
     "@types/testing-library__user-event": "4.2.0",
     "@typescript-eslint/eslint-plugin": "5.21.0",
+    "@typescript-eslint/parser": "5.21.0",
     "babel-jest": "28.0.3",
     "babel-loader": "8.2.5",
     "css-loader": "6.7.1",
