@@ -30,7 +30,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['pages/*.page.tsx'],
+      files: ['src/pages/*.page.tsx'],
       rules: {
         'react/function-component-definition': 'off',
       },
