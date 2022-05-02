@@ -2,7 +2,6 @@
 module.exports = {
   extends: [
     'airbnb',
-    'airbnb/hooks',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -31,7 +30,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['pages/*.page.tsx'],
+      files: ['src/pages/*.page.tsx'],
       rules: {
         'react/function-component-definition': 'off',
       },

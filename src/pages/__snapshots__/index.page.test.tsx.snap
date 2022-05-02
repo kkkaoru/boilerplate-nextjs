@@ -9,7 +9,7 @@ exports[`Home should be matched snapshot 1`] = `
       class="main"
     >
       <h1
-        class="title"
+        class="title css-6cmmyd-Home"
       >
         Welcome to 
         <a
